@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: raleway;
+}
+
+.gridlayout{
+    height: 100vh;
+    display: grid;
+    grid-column: 1fr 1fr;
+    grid-row: 1fr 3fr 1fr;
+}
+
+/* HEADER */
+header{
+    height: 100px;
+    width: 100%;
+    grid-column: 1/2;
+    grid-row: 1/-1;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+header section{
+    grid-column: 1/2;
+    grid-row: 1/-1;
+    padding: 10px;
+}
+
+header section img{
+    height: 100%;
+    width: 100%;
+}
+
+header nav{
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+header nav ul{
+    padding: 0 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    color: #000;
+}
+
+header form{
+    grid-column: 3/-1;
+    grid-row: 2/3;
+    
+}
+
+header form input{
+    background-color: yellow;
+    border: 1px solid #000;
+    width: 230px;
+    height: 20px;
+}
+
+header form button{
+    height: 24px;
+    background-color: #000;
+    color: #ffff;
+    border: 1px solid #000;
+    margin-left: -5px;
+}
+
+
+
+main{
+    height: 100%;
+}
+
+#home{
+    height: 90vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 4fr 1fr 2fr;
+}
+
+#home img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+}
+
+#home aside{
+    height: 90px;
+    width: 100%;
+    background-color: #000;
+    color: #ffff;
+    grid-column: 2/-1;
+    grid-row: 2/3;  
+    font-size: 3rem;
+    padding: 20px;
+}
+
+#home aside span{
+    color: yellow;
+}
+
+#events{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr 4fr;
+}
+
+#events img{
+    grid-column: 1/3;
+    grid-row: 1/-1;
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+#events .blackbar{
+    background-color: #000;
+    color: #ffff;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    height: 90px;
+    width: 100%;
+    text-align: right;
+    font-size: 3rem;
+    padding: 20px;
+}
+
+#events aside{
+    grid-column: 3/-1;
+    grid-row: 1/-1;
+    background-color: yellow;
+    padding: 150px 50px;
+}
+
+#events aside h1{
+    font-size: 3rem;
+}
+
+#events aside h2{
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 30px 0 0 0;
+}
+
+#events aside .cph{
+    width: 50%;
+}
+
+#events aside p{
+    font-size: 20px;
+    padding-top: 5px;
+}
+#events aside p span{
+    font-size: 30px;
+}
+
+#shop{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr .5fr 2fr;
+}
+
+#shop aside{
+    background-color: yellow;
+    padding: 150px 0 0 50px;
+    grid-column: 1/2;
+    grid-row: 1/-1;
+}
+
+#shop aside h1{
+    font-size: 3rem;
+    padding-bottom: 40px;
+}
+
+#shop aside h2{
+    font-size: 2rem;
+    padding-bottom: 10px;
+}
+
+#shop aside p{
+    font-size: 1rem;
+}
+
+
+#shop aside ul li{
+    font-size: 14px;
+    padding-top: 20px
+}
+
+.shopbar{
+    height: 90px;
+    grid-column: 3/-1;
+    grid-row: 2/3;
+    background-color: #000;
+    color: #ffff;
+    font-size: 3rem;
+    padding: 20px 0 0 20px;
+}
+
+.gallery{
+    grid-column: 2/-1;
+    grid-row: 3/-1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 20px;
+    padding: 10px 60px 20px 20px;
+}
+
+.gallery figure{
+    border: 1px solid black;
+    width: 100%;
+    padding: 30px;
+}
+
+.gallery figure img{
+    width: 100%;
+}
+
+.gallery figure figcaption{
+    width: 100%;
+    text-align: center;
+}
+
+#contact{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1.5fr 100px 2fr 1.5fr;
+}
+
+#contact img{
+    width: 100%;
+    height: 100%;
+    grid-column: 1/2;
+    grid-row: 1/4;
+}
+
+.contactbar{
+    background-color: yellow;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    width: 80%;
+    color: #000;
+    text-align: right;
+    font-size: 3rem;
+    padding: 25px 25px 0 0;
+}
+
+.info{
+    background-color: black;
+    color: #ffff;
+    width: 100%;
+    height: 100%;
+    grid-column: 1/2;
+    grid-row: 4/-1;
+    padding: 100px 200px;
+    text-align: center;
+}
+
+.info h1{
+    font-size: 2rem;
+}
+
+.info p{
+    font-size: 15px;
+    padding: 5px;
+}
+
+.formular{
+    grid-column: 2/-1;
+    grid-row: 1/-1;
+    width: 100%;
+    height: 100%;
+    padding: 240px 0 0 200px;
+}
+
+.formular h2{
+    font-size: 3rem;
+    padding-bottom: 20px;
+}
+
+.formular form{
+    padding-bottom: 20px;
+}
+
+.formular form label{
+    display: block;
+    font-size: 20px;
+    padding-bottom: 5px;
+}
+
+.formular form input{
+    width: 350px;
+    height: 40px;
+    background-color: yellow;
+    border: 1px solid black;
+}
+
+.formular input{
+    background-color: #000;
+    border: none;
+    color: #ffff;
+    height: 30px;
+}
